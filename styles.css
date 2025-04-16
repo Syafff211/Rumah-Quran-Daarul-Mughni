@@ -117,3 +117,194 @@ footer {
     background: #333;
     color: #fff;
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .vision-mission-item, .program-item {
+        flex: 1;
+        min-width: 220px;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .vision-mission-item, .program-item {
+        flex: 1;
+        min-width: 45%;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    #hero h2 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .vision-mission-item, .program-item {
+        flex: 1;
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .vision-mission-item i, .program-item i {
+        font-size: 40px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+.back-button {
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #ff6600, #ff9900);
+    color: white;
+    border: 2px solid #ff6600;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Efek Hover */
+.back-button:hover {
+    background: linear-gradient(135deg, #ff9900, #ff6600);
+    border-color: #ff9900;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1) rotate(2deg);
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* Efek aktif */
+.back-button:active {
+    background-color: #e65c00;
+    border-color: #e65c00;
+    transform: translateY(2px);
+}
+
+.back-button:focus {
+    outline: none;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 102, 0, 0.8), 0 0 20px rgba(255, 102, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 102, 0, 1), 0 0 30px rgba(255, 102, 0, 0.8);
+    }
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Mengatur posisi tombol di tengah */
+.back-to-home {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Efek Hover: Scaling, Shadow, Glow */
+.btn:hover {
+    background-color: #ff9900;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    animation: glowPulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Efek aktif ketika tombol ditekan */
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi Pulse: Efek Denyut */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 102, 0, 1), 0 0 20px rgba(255, 102, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 102, 0, 1), 0 0 40px rgba(255, 102, 0, 0.8);
+    }
+}
